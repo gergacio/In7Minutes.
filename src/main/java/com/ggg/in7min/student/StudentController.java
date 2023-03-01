@@ -1,22 +1,30 @@
 package com.ggg.in7min.student;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/v1/students")
+@AllArgsConstructor
 public class StudentController {
+    private final StudentService studentService;
     @GetMapping
     public List<Student> getAllStudents(){
-        List<Student> students = Arrays.asList(
-                new Student(1l, "Georgi", "ggeorgeuk@gamil.com", Gender.MALE),
-                new Student(2l, "Alex", "alex@gamil.com", Gender.FEMALE)
-
-        );
-        return students;
+//        throw new IllegalStateException("oops error");
+        return studentService.getAllStudents();
+    }
+    @PostMapping
+    public void addStudent(@Valid @RequestBody Student student){
+        //check if email is taken
+        studentService.addStudent(student);
+    }
+    @DeleteMapping(path = "{studentId}")
+    public void deleteStudent(@PathVariable("studentId") Long studentId){
+        //check if student exists
+        studentService.deleteStudent(studentId);
     }
 }
