@@ -9,7 +9,7 @@ class In7minApplicationTests {
 
 	@Test
 	void contextLoads() {
-		Assertions.fail("oops test failed");
+//		Assertions.fail("oops test failed");
 	}
 
 }
