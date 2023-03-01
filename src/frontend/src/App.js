@@ -11,7 +11,7 @@ import {
     Badge,
     Tag,
     Avatar,
-    Radio, Popconfirm
+    Radio, Popconfirm, Image
 } from 'antd';
 
 import {
@@ -29,7 +29,7 @@ import './App.css';
 import {errorNotification, successNotification} from "./Notification";
 
 
-const {Header, Content, Sider} = Layout;
+const {Header, Content, Sider, Footer} = Layout;
 const {SubMenu} = Menu;
 
 const TheAvatar = ({name}) => {
@@ -221,8 +221,16 @@ function App() {
                     {renderStudents()}
                 </div>
             </Content>
+            <Footer style={{textAlign: 'center'}}>
+                <Image
+                    width={75}
+                    src="https://user-images.githubusercontent.com/12120885/222193634-be293776-fba8-4bca-a7ac-4306a126b785.png"
+                />
+            </Footer>
+
         </Layout>
     </Layout>
+
 }
 
 export default App;
