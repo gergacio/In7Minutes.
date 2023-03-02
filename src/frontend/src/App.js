@@ -226,10 +226,10 @@ function App() {
                     width={75}
                     src="https://user-images.githubusercontent.com/12120885/222193634-be293776-fba8-4bca-a7ac-4306a126b785.png"
                 />
-                {/*<Image*/}
-                {/*    width={75}*/}
-                {/*    src="https://user-images.githubusercontent.com/12120885/222363515-6dff214c-6f49-4e86-a8bf-7f2dcb8dee9e.png"*/}
-                {/*/>*/}
+                <Image
+                    width={75}
+                    src="https://user-images.githubusercontent.com/12120885/222363515-6dff214c-6f49-4e86-a8bf-7f2dcb8dee9e.png"
+                />
                 {/*<span>  by GGG</span>*/}
             </Footer>
 
