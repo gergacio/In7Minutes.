@@ -226,11 +226,6 @@ function App() {
                     width={75}
                     src="https://user-images.githubusercontent.com/12120885/222193634-be293776-fba8-4bca-a7ac-4306a126b785.png"
                 />
-                <Image
-                    width={75}
-                    src="https://user-images.githubusercontent.com/12120885/222193634-be293776-fba8-4bca-a7ac-4306a126b785.png"
-                />
-
                 <span>  by GGG</span>
             </Footer>
 
