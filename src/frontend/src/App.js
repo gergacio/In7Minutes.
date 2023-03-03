@@ -224,7 +224,7 @@ function App() {
             <Footer style={{textAlign: 'center'}}>
                 <Image
                     width={75}
-                    src="https://user-images.githubusercontent.com/12120885/222193634-be293776-fba8-4bca-a7ac-4306a126b785.png"
+                    src="https://user-images.githubusercontent.com/12120885/222685356-554f43ca-440f-446a-b229-a3c35ea61e46.png"
                 />
                 <span>  by GGG</span>
             </Footer>
