@@ -230,11 +230,6 @@ function App() {
                     />
                 </div>
                 <p> <small>&copy; Copyright 2023, Georgi Gospodinov Georgiev</small></p>
-<<<<<<< HEAD
-                <p> <small>&copy; Copyright 2023, Georgi Gospodinov Georgiev</small></p>
-=======
-
->>>>>>> f9cea0e3a282fe0c3bf2c24373175cdf039d18b1
             </Footer>
 
         </Layout>
