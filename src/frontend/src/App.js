@@ -229,6 +229,7 @@ function App() {
             </Content>
             <Footer style={{textAlign: 'center'}}>
                 <p> <small>&copy; Copyright 2023, Georgi Gospodinov Georgiev</small></p>
+                <p> <small>&copy; Copyright 2023, Georgi Gospodinov Georgiev</small></p>
             </Footer>
 
         </Layout>
