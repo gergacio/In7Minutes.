@@ -189,12 +189,7 @@ function App() {
         <Sider collapsible collapsed={collapsed}
                onCollapse={setCollapsed}>
             <div className="logo"/>
-            <div>
-                <Image
-                    width={75}
-                    src="https://user-images.githubusercontent.com/12120885/222685356-554f43ca-440f-446a-b229-a3c35ea61e46.png"
-                />
-            </div>
+
             <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
                 {/*<Menu.Item key="1" icon={<PieChartOutlined/>}>*/}
                 {/*    Option 1*/}
@@ -228,8 +223,18 @@ function App() {
                 </div>
             </Content>
             <Footer style={{textAlign: 'center'}}>
+                <div>
+                    <Image
+                        width={75}
+                        src="https://user-images.githubusercontent.com/12120885/222685356-554f43ca-440f-446a-b229-a3c35ea61e46.png"
+                    />
+                </div>
                 <p> <small>&copy; Copyright 2023, Georgi Gospodinov Georgiev</small></p>
+<<<<<<< HEAD
                 <p> <small>&copy; Copyright 2023, Georgi Gospodinov Georgiev</small></p>
+=======
+
+>>>>>>> f9cea0e3a282fe0c3bf2c24373175cdf039d18b1
             </Footer>
 
         </Layout>
