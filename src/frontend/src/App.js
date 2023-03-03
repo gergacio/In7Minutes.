@@ -15,8 +15,8 @@ import {
 } from 'antd';
 
 import {
-    DesktopOutlined,
-    PieChartOutlined,
+    // DesktopOutlined,
+    // PieChartOutlined,
     FileOutlined,
     TeamOutlined,
     UserOutlined,
@@ -189,13 +189,19 @@ function App() {
         <Sider collapsible collapsed={collapsed}
                onCollapse={setCollapsed}>
             <div className="logo"/>
+            <div>
+                <Image
+                    width={75}
+                    src="https://user-images.githubusercontent.com/12120885/222685356-554f43ca-440f-446a-b229-a3c35ea61e46.png"
+                />
+            </div>
             <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-                <Menu.Item key="1" icon={<PieChartOutlined/>}>
-                    Option 1
-                </Menu.Item>
-                <Menu.Item key="2" icon={<DesktopOutlined/>}>
-                    Option 2
-                </Menu.Item>
+                {/*<Menu.Item key="1" icon={<PieChartOutlined/>}>*/}
+                {/*    Option 1*/}
+                {/*</Menu.Item>*/}
+                {/*<Menu.Item key="2" icon={<DesktopOutlined/>}>*/}
+                {/*    Option 2*/}
+                {/*</Menu.Item>*/}
                 <SubMenu key="sub1" icon={<UserOutlined/>} title="User">
                     <Menu.Item key="3">Tom</Menu.Item>
                     <Menu.Item key="4">Bill</Menu.Item>
@@ -222,11 +228,7 @@ function App() {
                 </div>
             </Content>
             <Footer style={{textAlign: 'center'}}>
-                <Image
-                    width={75}
-                    src="https://user-images.githubusercontent.com/12120885/222685356-554f43ca-440f-446a-b229-a3c35ea61e46.png"
-                />
-                <span>  by GGG</span>
+                <p> <small>&copy; Copyright 2023, Georgi Gospodinov Georgiev</small></p>
             </Footer>
 
         </Layout>
