@@ -224,10 +224,13 @@ function App() {
             </Content>
             <Footer style={{textAlign: 'center'}}>
 
-                <Image
-                    width={75}
-                    src="https://user-images.githubusercontent.com/12120885/222685356-554f43ca-440f-446a-b229-a3c35ea61e46.png"
-                />
+
+                <div>
+                    <Image
+                        width={75}
+                        src="https://user-images.githubusercontent.com/12120885/222685356-554f43ca-440f-446a-b229-a3c35ea61e46.png"
+                    />
+                </div>
                 <small>Copyright © 2019 - 2023 3GBG®. All rights reserved.</small>
             </Footer>
 
