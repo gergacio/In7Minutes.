@@ -11,7 +11,7 @@ import {
     Badge,
     Tag,
     Avatar,
-    Radio, Popconfirm, Image
+    Radio, Popconfirm, Image, Divider
 } from 'antd';
 
 import {
@@ -227,6 +227,11 @@ function App() {
                     src="https://user-images.githubusercontent.com/12120885/222193634-be293776-fba8-4bca-a7ac-4306a126b785.png"
                 />
                 <span>  by GGG</span>
+                <Divider>
+                    <a href="https://github.com/gergacio/in7min" target="_blank">
+                        click here to access source code
+                    </a>
+                </Divider>
             </Footer>
 
         </Layout>
