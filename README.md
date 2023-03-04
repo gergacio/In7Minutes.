@@ -2,7 +2,7 @@
 
 ## Tools and technologies used:
 #### ✅ Spring Boot 3
-#### ✅ TTP & API development
+#### ✅ HTTP & API development
 #### ✅ JavaScript and React for front-end development (React.js Hooks and Functions Components)
 #### ✅ Maven Build Tool
 #### ✅ Spring Data JPA
