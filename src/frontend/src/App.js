@@ -230,6 +230,7 @@ function App() {
                 />
                 </div>
                 <small>Copyright © 2019 - 2023 3GBG®. All rights reserved.</small>
+                <small>Copyright © 2019 - 2023 3GBG®. All rights reserved.</small>
             </Footer>
 
         </Layout>
