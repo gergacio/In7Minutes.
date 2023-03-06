@@ -14,7 +14,7 @@ width: 100%;
 
 const Footer = () => (
     <Box>
-        <p> <small>Copyright © 2023 3GBG®. All rights reserved.</small></p>
+        <p> <small>Copyright © 2023 3GBG®.All rights reserved.</small></p>
     </Box>
 );
 

@@ -11,7 +11,7 @@ flex-direction:column;
 justify-content: center;
 align-items: start;
 width: 100%;
-padding: 10px;  
+padding: 5px;  
 `
 
 

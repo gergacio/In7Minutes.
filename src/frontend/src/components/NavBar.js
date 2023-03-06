@@ -38,20 +38,20 @@ const NavBar = () => {
                 <StyledLink to="/about">About</StyledLink>
             </LI>
             <LI>
-                <StyledLink to="/students">Students</StyledLink>
-            </LI>
-            {/*<LI>*/}
-            {/*    <StyledLink to="/bookings">Bookings</StyledLink>*/}
-            {/*</LI>*/}
-            <LI>
                 <StyledLink to="/courses">Courses</StyledLink>
             </LI>
             <LI>
                 <StyledLink to="/lessons">Lessons</StyledLink>
             </LI>
-            {/*<LI>*/}
-            {/*    <StyledLink to="/createl">Create</StyledLink>*/}
-            {/*</LI>*/}
+            <LI>
+                <StyledLink to="/create">Create</StyledLink>
+            </LI>
+            <LI>
+                <StyledLink to="/students">Students</StyledLink>
+            </LI>
+            <LI>
+                <StyledLink to="/bookings">Bookings</StyledLink>
+            </LI>
 
         </UL>
     );
