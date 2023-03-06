@@ -50,7 +50,7 @@ font-weight: 500;
 `
 const DivText = styled.div`
 padding: 15px;
-background-color: #232b2b;
+background-color: #353935;
 color: white;
 grid-column: 1/5;
 grid-row: 1/2;
@@ -63,7 +63,7 @@ const HobbyDiv = styled.div`
 padding: 15px;
 background-color: #f5f5f5;
 color: #54555C;
-grid-column: 1/7;
+grid-column: 1/5;
 grid-row: 2/2;
 order: 2;
 text-align: left;
@@ -73,7 +73,7 @@ const EduDiv = styled.div`
 padding: 15px;
 background-color: #999999;
 color: white;
-grid-column: 7/11;
+grid-column: 5/11;
 grid-row: 2/2;
 font-weight: 500;
 `
@@ -87,7 +87,7 @@ const About = () => (
     <Box>
         <Article>
             <DivImg>
-                <h1>Tools and technologies used :</h1>
+                <h1><strong>Tools and technologies used :</strong></h1>
                 <UL>
                     <li>- Spring Boot 3</li>
                     <br/>
@@ -119,22 +119,27 @@ const About = () => (
 
             </DivImg>
             <DivText>
-                <h2>About Us</h2>
-                <h3><Span>In7Minutes.</Span> is non-formal tech education provider.</h3>
-                <h3>A digital learning environment that manages content and learners.</h3>
+                <h1><strong>About Us</strong></h1>
+                <br/>
+                <br/>
+                <br/>
+                <h2>We are non-formal tech education provider.</h2>
+                <br/>
+                {/*<h3>A digital learning environment that manages content and learners.</h3>*/}
+                <br/>
+                <h3>We value quality.</h3>
 
 
             </DivText>
             <EduDiv>
-                <h1>Vision</h1>
-                <p><Span>In7Minutes.</Span>'s concept-based vision statement:</p>
-                <p><blockquote>"Just Simplify"</blockquote></p>
-            </EduDiv>
-            <HobbyDiv>
-                <h1>Mission</h1>
+                <h1><strong>Mission</strong></h1>
                 <p><Span>In7Minutes.</Span>'s mission is to provide 7-min high quality computer science mini lessons.
                 </p>
-
+            </EduDiv>
+            <HobbyDiv>
+                <h1><strong>Vision</strong></h1>
+                <p><Span>In7Minutes.</Span>'s concept-based vision statement:</p>
+                <p><blockquote>"We Simplify."</blockquote></p>
             </HobbyDiv>
 
         </Article>
