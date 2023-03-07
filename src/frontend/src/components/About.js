@@ -43,7 +43,7 @@ display: grid;
 const DivImg = styled.div`
 padding: 15px;
 background-color: #ffff00;
-color: #54555C;
+color: #353935;
 grid-column: 5/11;
 grid-row: 1/2;
 font-weight: 500;
@@ -89,29 +89,29 @@ const About = () => (
             <DivImg>
                 <h1><strong>Tools and technologies used :</strong></h1>
                 <UL>
-                    <li>- Spring Boot 3</li>
+                    <li><strong>- Spring Boot 3</strong></li>
                     <br/>
-                    <li>- HTTP & API development</li>
+                    <li><strong>- HTTP & API development</strong></li>
                     <br/>
-                    <li>- Front-end development (React|Ant Design|Framer Motion)</li>
+                    <li><strong>- Front-end development (React|Ant Design|Framer Motion)</strong></li>
                     <br/>
-                    <li>- Maven Build Tool</li>
+                    <li><strong>- Maven Build Tool</strong></li>
                     <br/>
-                    <li>- Database: (Postgres on Docker)</li>
+                    <li><strong>- Database: (Postgres on Docker)</strong></li>
                     <br />
-                    <li>- Spring Data JPA</li>
+                    <li><strong>- Spring Data JPA</strong></li>
                     <br/>
-                    <li>- Server and Client Side Error Handling</li>
+                    <li><strong>- Server and Client Side Error Handling</strong></li>
                     <br/>
-                    <li>- Packaging applications for deployment (Docker and Jib)</li>
+                    <li><strong>- Packaging applications for deployment (Docker and Jib)</strong></li>
                     <br/>
-                    <li>- AWS (RDS & Elastic Beanstalk)</li>
+                    <li><strong>- AWS (RDS & Elastic Beanstalk)</strong></li>
                     <br/>
-                    <li>- Software Deployment Automation (GitHub Actions)</li>
+                    <li><strong>- Software Deployment Automation (GitHub Actions)</strong></li>
                     <br/>
-                    <li>- Software Deployment Monitoring (Slack)</li>
+                    <li><strong>- Software Deployment Monitoring (Slack)</strong></li>
                     <br/>
-                    <li>- Unit and Integration Testing (JUnit5)</li>
+                    <li><strong>- Unit and Integration Testing (JUnit5)</strong></li>
                     <br/>
 
                 </UL>
