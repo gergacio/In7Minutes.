@@ -1,9 +1,14 @@
 package com.ggg.in7min.student;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.ggg.in7min.booking.Booking;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @ToString
 @Getter
@@ -35,9 +40,14 @@ public class Student {
     @Column(nullable = false)
     private Gender gender;
 
+    @JsonIgnoreProperties({"student"})
+    @OneToMany(mappedBy="student",fetch = FetchType.LAZY, cascade=CascadeType.REMOVE)
+    private List<Booking> bookings;
+
     public Student(String name, String email, Gender gender) {
         this.name = name;
         this.email = email;
         this.gender = gender;
+        this.bookings = new ArrayList<Booking>();
     }
 }

@@ -10,6 +10,7 @@ import Header from "./components/Header";
 import About from "./components/About";
 import ErrorPage from "./components/ErrorPage";
 import LessonContainer from "./containers/LessonContainer";
+import CourseContainer from "./containers/CourseContainer";
 
 
 
@@ -32,9 +33,11 @@ function App() {
                 <Header/>
                 <Routes>
                     <Route exact path="/" element={< Home />} />
-                    <Route path="/students" element={< StudentContainer />} />
-                    <Route path="/lessons" element={< LessonContainer />} />
                     <Route path="/about" element={< About />} />
+                    <Route path="/courses" element={< CourseContainer />} />
+                    <Route path="/lessons" element={< LessonContainer />} />
+                    <Route path="/students" element={< StudentContainer />} />
+
                     <Route path="*" element={< ErrorPage />}/>
                 </ Routes>
                 <Footer />

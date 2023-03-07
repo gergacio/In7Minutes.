@@ -17,7 +17,7 @@ import {
     LoadingOutlined,
     PlusOutlined
 } from '@ant-design/icons';
-import StudentDrawerForm from "../StudentDrawerForm";
+import StudentDrawerForm from "../forms/StudentDrawerForm";
 
 import {errorNotification, successNotification} from "../Notification";
 

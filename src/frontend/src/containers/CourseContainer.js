@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import {deleteLesson, getAllLessons} from "../services/LessonService";
+import {deleteCourse, getAllCourses} from "../services/CourseServices";
 import {
     Layout,
     Table,
@@ -17,9 +17,9 @@ import {
     LoadingOutlined,
     PlusOutlined
 } from '@ant-design/icons';
-import LessonDrawerForm from "../forms/LessonDrawerForm";
-import {errorNotification, successNotification} from "../Notification";
+import CourseDrawerForm from "../forms/CourseDrawerForm";
 
+import {errorNotification, successNotification} from "../Notification";
 
 
 
@@ -37,9 +37,9 @@ const TheAvatar = ({name}) => {
         {`${name.charAt(0)}${name.charAt(name.length - 1)}`}
     </Avatar>
 }
-const removeLesson = (lessonId, callback) => {
-    deleteLesson(lessonId).then(() => {
-        successNotification("Lesson deleted", `Lesson with ${lessonId} was deleted`);
+const removeStudent = (courseId, callback) => {
+    deleteCourse(courseId).then(() => {
+        successNotification("Course deleted", `Course with ${courseId} was deleted`);
         callback();
     }).catch(err => {
         err.response.json().then(res => {
@@ -52,13 +52,13 @@ const removeLesson = (lessonId, callback) => {
     })
 }
 
-const columns = fetchLessons => [
+const columns = fetchCourses => [
     {
         title: '',
         dataIndex: 'avatar',
         key: 'avatar',
-        render: (text, lesson) =>
-            <TheAvatar name={lesson.title}/>
+        render: (text, course) =>
+            <TheAvatar name={course.name}/>
     },
     {
         title: 'Id',
@@ -66,46 +66,46 @@ const columns = fetchLessons => [
         key: 'id',
     },
     {
-        title: 'Title',
-        dataIndex: 'title',
-        key: 'title',
+        title: 'Name',
+        dataIndex: 'name',
+        key: 'name',
     },
     {
-        title: 'Content',
-        dataIndex: 'content',
-        key: 'content',
+        title: 'Description',
+        dataIndex: 'description',
+        key: 'description',
     },
     {
         title: 'Actions',
         key: 'actions',
-        render: (text, lesson) =>
+        render: (text, course) =>
             <Radio.Group>
                 <Popconfirm
                     placement='topRight'
-                    title={`Are you sure to delete ${lesson.title}`}
-                    onConfirm={() => removeLesson(lesson.id, fetchLessons)}
+                    title={`Are you sure to delete ${course.name}`}
+                    onConfirm={() => removeStudent(course.id, fetchCourses)}
                     okText='Yes'
                     cancelText='No'>
                     <Radio.Button value="small">Delete</Radio.Button>
                 </Popconfirm>
-                <Radio.Button onClick={() => alert("TODO: Implement edit lesson")} value="small">Edit</Radio.Button>
+                <Radio.Button onClick={() => alert("TODO: Implement edit course")} value="small">Edit</Radio.Button>
             </Radio.Group>
     }
 ];
 
 const antIcon = <LoadingOutlined style={{fontSize: 24}} spin/>;
 
-const LessonContainer = () => {
-    const [lessons, setLessons] = useState([]);
+const StudentContainer = () => {
+    const [courses, setCourses] = useState([]);
     const [fetching, setFetching] = useState(true);
     const [showDrawer, setShowDrawer] = useState(false);
 
-    const fetchLessons = () =>
-        getAllLessons()
+    const fetchCourses = () =>
+        getAllCourses()
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                setLessons(data);
+                setCourses(data);
             }).catch(err => {
             console.log(err.response)
             err.response.json().then(res => {
@@ -119,53 +119,53 @@ const LessonContainer = () => {
 
     useEffect(() => {
         console.log("component is mounted");
-        fetchLessons();
+        fetchCourses();
     }, []);
 
-    const renderLessons = () => {
+    const renderCourses = () => {
         if (fetching) {
             return <Spin indicator={antIcon}/>
         }
-        if (lessons.length <= 0) {
+        if (courses.length <= 0) {
             return <>
                 <Button
                     onClick={() => setShowDrawer(!showDrawer)}
                     type="primary" shape="square" icon={<PlusOutlined/>} size="small">
-                    Add New Student
+                    Add New Course
                 </Button>
-                <LessonDrawerForm
+                <CourseDrawerForm
                     showDrawer={showDrawer}
                     setShowDrawer={setShowDrawer}
-                    fetchLessons={fetchLessons}
+                    fetchCourses={fetchCourses}
                 />
                 <Empty/>
             </>
         }
         return <>
-            <LessonDrawerForm
+            <CourseDrawerForm
                 showDrawer={showDrawer}
                 setShowDrawer={setShowDrawer}
-                fetchLessons={fetchLessons}
+                fetchCourses={fetchCourses}
             />
             <Table
-                dataSource={lessons}
-                columns={columns(fetchLessons)}
+                dataSource={courses}
+                columns={columns(fetchCourses)}
                 bordered
                 title={() =>
                     <>
-                        <Tag>Number of lessons</Tag>
-                        <Badge count={lessons.length} className="site-badge-count-4"/>
+                        <Tag>Number of courses</Tag>
+                        <Badge count={courses.length} className="site-badge-count-4"/>
                         <br/><br/>
                         <Button
                             onClick={() => setShowDrawer(!showDrawer)}
                             type="primary" shape="square" icon={<PlusOutlined/>} size="small">
-                            Add New Lesson
+                            Add New Course
                         </Button>
                     </>
                 }
                 pagination={{pageSize: 50}}
                 scroll={{y: 500}}
-                rowKey={lesson => lesson.id}
+                rowKey={student => student.id}
             />
         </>
     }
@@ -174,7 +174,7 @@ const LessonContainer = () => {
         <Layout className="site-layout">
             <Content style={{margin: '0 16px'}}>
                 <div className="site-layout-background" style={{padding: 24, minHeight: 360}}>
-                    {renderLessons()}
+                    {renderCourses()}
                 </div>
             </Content>
         </Layout>
@@ -182,4 +182,4 @@ const LessonContainer = () => {
 
 }
 
-export default LessonContainer;
+export default StudentContainer;

@@ -62,8 +62,8 @@ font-weight: 500;
 const HobbyDiv = styled.div`
 padding: 15px;
 background-color: #f5f5f5;
-color: #54555C;
-grid-column: 1/7;
+color: #353935;
+grid-column: 1/6;
 grid-row: 2/2;
 order: 2;
 text-align: left;
@@ -71,15 +71,15 @@ font-weight: 500;
 `
 const EduDiv = styled.div`
 padding: 15px;
-background-color: #999999;
+background-color: #868888;
 color: white;
-grid-column: 7/11;
+grid-column: 6/11;
 grid-row: 2/2;
 font-weight: 500;
 `
 const Span = styled.span`
     color: #FFFF00;
-  background-color: #353935;
+  background-color: #353839;
   padding: 0.1rem;
 `
 
@@ -87,20 +87,21 @@ const About = () => (
     <Box>
         <Article>
             <DivImg>
-                <h1><strong>Tools and technologies used :</strong></h1>
+                <h1><strong><Span>In7Minutes.</Span> TECH STACK</strong></h1>
+                <hr></hr>
                 <UL>
-                    <li><h4><strong>- Spring Boot 3</strong></h4></li>
-                    <li><h4><strong>- HTTP & API development</strong></h4></li>
-                    <li><h4><strong>- Front-end development (React|Ant Design|Framer Motion)</strong></h4></li>
-                    <li><h4><strong>- Maven Build Tool</strong></h4></li>
-                    <li><h4><strong>- Database (Postgres on Docker)</strong></h4></li>
-                    <li><h4><strong>- Spring Data JPA</strong></h4></li>
-                    <li><h4><strong>- Server and Client Side Error Handling</strong></h4></li>
-                    <li><h4><strong>- Packaging applications for deployment (Docker and Jib)</strong></h4></li>
-                    <li><h4><strong>- AWS (RDS & Elastic Beanstalk)</strong></h4></li>
-                    <li><h4><strong>- Software Deployment Automation (GitHub Actions)</strong></h4></li>
-                    <li><h4><strong>- Software Deployment Monitoring (Slack)</strong></h4></li>
-                    <li><h4><strong>- Unit and Integration Testing (JUnit5)</strong></h4></li>
+                    <li><h4><strong> Spring Boot 3</strong></h4></li>
+                    <li><h4><strong> HTTP & API development</strong></h4></li>
+                    <li><h4><strong> Front-end development (React|Ant Design|Framer Motion)</strong></h4></li>
+                    <li><h4><strong> Maven Build Tool</strong></h4></li>
+                    <li><h4><strong> Database (Postgres on Docker)</strong></h4></li>
+                    <li><h4><strong> Spring Data JPA</strong></h4></li>
+                    <li><h4><strong> Server and Client Side Error Handling</strong></h4></li>
+                    <li><h4><strong> Packaging applications for deployment (Docker and Jib)</strong></h4></li>
+                    <li><h4><strong> AWS (RDS & Elastic Beanstalk)</strong></h4></li>
+                    <li><h4><strong> Software Deployment Automation (GitHub Actions)</strong></h4></li>
+                    <li><h4><strong> Software Deployment Monitoring (Slack)</strong></h4></li>
+                    <li><h4><strong> Unit and Integration Testing (JUnit5)</strong></h4></li>
 
                 </UL>
 
@@ -121,12 +122,13 @@ const About = () => (
             </DivText>
             <EduDiv>
                 <h1><strong>Mission</strong></h1>
-                <p><strong><Span>In7Minutes.</Span>'s mission is to provide 7-min high quality computer science mini lessons.</strong></p>
+                <h3><strong>Our mission is to provide high quality computer science mini lessons.</strong></h3>
+
             </EduDiv>
             <HobbyDiv>
                 <h1><strong>Vision</strong></h1>
-                <p><strong><Span>In7Minutes.</Span>'s concept-based vision statement:</strong></p>
-                <p><strong><blockquote>"We Simplify."</blockquote></strong></p>
+                <h3><strong>Our concept-based vision statement is "WE SIMPLIFY".</strong></h3>
+
             </HobbyDiv>
 
         </Article>

@@ -1,29 +1,29 @@
 import {Drawer, Input, Col, Select, Form, Row, Button, Spin} from 'antd';
-import {addNewStudent} from "./services/StudentService";
+import {addNewCourse} from "../services/CourseServices";
 import {LoadingOutlined} from "@ant-design/icons";
 import {useState} from 'react';
-import {successNotification, errorNotification} from "./Notification";
+import {successNotification, errorNotification} from "../Notification";
 
 const {Option} = Select;
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
-function StudentDrawerForm({showDrawer, setShowDrawer, fetchStudents}) {
+function CourseDrawerForm({showDrawer, setShowDrawer, fetchCourses}) {
     const onCLose = () => setShowDrawer(false);
     const [submitting, setSubmitting] = useState(false);
 
-    const onFinish = student => {
+    const onFinish = course => {
         setSubmitting(true)
-        console.log(JSON.stringify(student, null, 2))
-        addNewStudent(student)
+        console.log(JSON.stringify(course, null, 2))
+        addNewCourse(course)
             .then(() => {
-                console.log("student added")
+                console.log("course added")
                 onCLose();
                 successNotification(
-                    "Student successfully added",
-                    `${student.name} was added to the system`
+                    "Course successfully added",
+                    `${course.name} was added to the system`
                 )
-                fetchStudents();
+                fetchCourses();
             }).catch(err => {
             console.log(err);
             err.response.json().then(res => {
@@ -44,7 +44,7 @@ function StudentDrawerForm({showDrawer, setShowDrawer, fetchStudents}) {
     };
 
     return <Drawer
-        title="Create new student"
+        title="Create new course"
         width={720}
         onClose={onCLose}
         visible={showDrawer}
@@ -77,26 +77,11 @@ function StudentDrawerForm({showDrawer, setShowDrawer, fetchStudents}) {
                 </Col>
                 <Col span={12}>
                     <Form.Item
-                        name="email"
+                        name="description"
                         label="Email"
-                        rules={[{required: true, message: 'Please enter student email'}]}
+                        rules={[{required: true, message: 'Please enter course description'}]}
                     >
-                        <Input placeholder="Please enter student email"/>
-                    </Form.Item>
-                </Col>
-            </Row>
-            <Row gutter={16}>
-                <Col span={12}>
-                    <Form.Item
-                        name="gender"
-                        label="gender"
-                        rules={[{required: true, message: 'Please select a gender'}]}
-                    >
-                        <Select placeholder="Please select a gender">
-                            <Option value="MALE">MALE</Option>
-                            <Option value="FEMALE">FEMALE</Option>
-                            <Option value="OTHER">OTHER</Option>
-                        </Select>
+                        <Input placeholder="Please enter course description"/>
                     </Form.Item>
                 </Col>
             </Row>
@@ -116,4 +101,4 @@ function StudentDrawerForm({showDrawer, setShowDrawer, fetchStudents}) {
     </Drawer>
 }
 
-export default StudentDrawerForm;
+export default CourseDrawerForm;
