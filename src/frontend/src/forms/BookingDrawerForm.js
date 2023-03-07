@@ -1,5 +1,5 @@
 import {Drawer, Input, Col, Select, Form, Row, Button, Spin} from 'antd';
-import {addNewCourse} from "../services/CourseServices";
+import {addNewBooking} from "../services/BookingServices";
 import {LoadingOutlined} from "@ant-design/icons";
 import {useState} from 'react';
 import {successNotification, errorNotification} from "../Notification";
@@ -8,22 +8,22 @@ const {Option} = Select;
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
-function CourseDrawerForm({showDrawer, setShowDrawer, fetchCourses}) {
+function BookingDrawerForm({showDrawer, setShowDrawer, fetchBookings}) {
     const onCLose = () => setShowDrawer(false);
     const [submitting, setSubmitting] = useState(false);
 
-    const onFinish = course => {
+    const onFinish = booking => {
         setSubmitting(true)
-        console.log(JSON.stringify(course, null, 2))
-        addNewCourse(course)
+        console.log(JSON.stringify(booking, null, 2))
+        addNewBooking(booking)
             .then(() => {
-                console.log("course added")
+                console.log("booking added")
                 onCLose();
                 successNotification(
-                    "Course successfully added",
-                    `${course.name} was added to the system`
+                    "Booking successfully added",
+                    `${booking.id} was added to the system`
                 )
-                fetchCourses();
+                fetchBookings();
             }).catch(err => {
             console.log(err);
             err.response.json().then(res => {
@@ -44,7 +44,7 @@ function CourseDrawerForm({showDrawer, setShowDrawer, fetchCourses}) {
     };
 
     return <Drawer
-        title="Create new course"
+        title="Create new booking"
         width={720}
         onClose={onCLose}
         visible={showDrawer}
@@ -68,23 +68,41 @@ function CourseDrawerForm({showDrawer, setShowDrawer, fetchCourses}) {
             <Row gutter={16}>
                 <Col span={12}>
                     <Form.Item
-                        name="name"
-                        label="Name"
-                        rules={[{required: true, message: 'Please enter course name'}]}
+                        name="date"
+                        label="Date"
+                        rules={[{required: true, message: 'Please enter booking date'}]}
                     >
-                        <Input placeholder="Please enter course name"/>
-                    </Form.Item>
-                </Col>
-                <Col span={12}>
-                    <Form.Item
-                        name="description"
-                        label="Description"
-                        rules={[{required: true, message: 'Please enter course description'}]}
-                    >
-                        <Input placeholder="Please enter course description"/>
+                        <Input placeholder="Please enter booking date"/>
                     </Form.Item>
                 </Col>
             </Row>
+            <Row gutter={16}>
+                <Col span={12}>
+                    <Form.Item
+                        name={["course", "id"]}
+                        label="Course Id"
+                        rules={[{required: true, message: 'Please enter course id'}]}
+                    >
+                        <Input placeholder="Please enter course id"/>
+                    </Form.Item>
+                </Col>
+
+            </Row>
+            <Row gutter={16}>
+                <Col span={12}>
+                    <Form.Item
+                        name={["student", "Id"]}
+                        label="Student Id"
+                        rules={[{required: true, message: 'Please enter student id'}]}
+                    >
+                        <Input placeholder="Please enter student id"/>
+                    </Form.Item>
+                </Col>
+
+            </Row>
+
+
+            {/*----------------*/}
             <Row>
                 <Col span={12}>
                     <Form.Item>
@@ -97,8 +115,13 @@ function CourseDrawerForm({showDrawer, setShowDrawer, fetchCourses}) {
             <Row>
                 {submitting && <Spin indicator={antIcon} />}
             </Row>
+
+
+
+
+
         </Form>
     </Drawer>
 }
 
-export default CourseDrawerForm;
+export default BookingDrawerForm;

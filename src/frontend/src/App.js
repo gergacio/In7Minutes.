@@ -11,6 +11,7 @@ import About from "./components/About";
 import ErrorPage from "./components/ErrorPage";
 import LessonContainer from "./containers/LessonContainer";
 import CourseContainer from "./containers/CourseContainer";
+import BookingContainer from "./containers/BookingContainer";
 
 
 
@@ -37,6 +38,7 @@ function App() {
                     <Route path="/courses" element={< CourseContainer />} />
                     <Route path="/lessons" element={< LessonContainer />} />
                     <Route path="/students" element={< StudentContainer />} />
+                    <Route path="/bookings" element={< BookingContainer />} />
 
                     <Route path="*" element={< ErrorPage />}/>
                 </ Routes>
