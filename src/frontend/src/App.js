@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import About from "./components/About";
 import ErrorPage from "./components/ErrorPage";
+import LessonContainer from "./containers/LessonContainer";
 
 
 
@@ -32,6 +33,7 @@ function App() {
                 <Routes>
                     <Route exact path="/" element={< Home />} />
                     <Route path="/students" element={< StudentContainer />} />
+                    <Route path="/lessons" element={< LessonContainer />} />
                     <Route path="/about" element={< About />} />
                     <Route path="*" element={< ErrorPage />}/>
                 </ Routes>

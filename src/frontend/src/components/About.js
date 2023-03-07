@@ -44,7 +44,7 @@ const DivImg = styled.div`
 padding: 15px;
 background-color: #ffff00;
 color: #353935;
-grid-column: 5/11;
+grid-column: 6/11;
 grid-row: 1/2;
 font-weight: 500;
 `
@@ -52,7 +52,7 @@ const DivText = styled.div`
 padding: 15px;
 background-color: #353935;
 color: white;
-grid-column: 1/5;
+grid-column: 1/6;
 grid-row: 1/2;
 order: 2;
 text-align: left;
@@ -63,7 +63,7 @@ const HobbyDiv = styled.div`
 padding: 15px;
 background-color: #f5f5f5;
 color: #54555C;
-grid-column: 1/5;
+grid-column: 1/7;
 grid-row: 2/2;
 order: 2;
 text-align: left;
@@ -73,7 +73,7 @@ const EduDiv = styled.div`
 padding: 15px;
 background-color: #999999;
 color: white;
-grid-column: 5/11;
+grid-column: 7/11;
 grid-row: 2/2;
 font-weight: 500;
 `
@@ -89,30 +89,18 @@ const About = () => (
             <DivImg>
                 <h1><strong>Tools and technologies used :</strong></h1>
                 <UL>
-                    <li><strong>- Spring Boot 3</strong></li>
-                    <br/>
-                    <li><strong>- HTTP & API development</strong></li>
-                    <br/>
-                    <li><strong>- Front-end development (React|Ant Design|Framer Motion)</strong></li>
-                    <br/>
-                    <li><strong>- Maven Build Tool</strong></li>
-                    <br/>
-                    <li><strong>- Database: (Postgres on Docker)</strong></li>
-                    <br />
-                    <li><strong>- Spring Data JPA</strong></li>
-                    <br/>
-                    <li><strong>- Server and Client Side Error Handling</strong></li>
-                    <br/>
-                    <li><strong>- Packaging applications for deployment (Docker and Jib)</strong></li>
-                    <br/>
-                    <li><strong>- AWS (RDS & Elastic Beanstalk)</strong></li>
-                    <br/>
-                    <li><strong>- Software Deployment Automation (GitHub Actions)</strong></li>
-                    <br/>
-                    <li><strong>- Software Deployment Monitoring (Slack)</strong></li>
-                    <br/>
-                    <li><strong>- Unit and Integration Testing (JUnit5)</strong></li>
-                    <br/>
+                    <li><h4><strong>- Spring Boot 3</strong></h4></li>
+                    <li><h4><strong>- HTTP & API development</strong></h4></li>
+                    <li><h4><strong>- Front-end development (React|Ant Design|Framer Motion)</strong></h4></li>
+                    <li><h4><strong>- Maven Build Tool</strong></h4></li>
+                    <li><h4><strong>- Database (Postgres on Docker)</strong></h4></li>
+                    <li><h4><strong>- Spring Data JPA</strong></h4></li>
+                    <li><h4><strong>- Server and Client Side Error Handling</strong></h4></li>
+                    <li><h4><strong>- Packaging applications for deployment (Docker and Jib)</strong></h4></li>
+                    <li><h4><strong>- AWS (RDS & Elastic Beanstalk)</strong></h4></li>
+                    <li><h4><strong>- Software Deployment Automation (GitHub Actions)</strong></h4></li>
+                    <li><h4><strong>- Software Deployment Monitoring (Slack)</strong></h4></li>
+                    <li><h4><strong>- Unit and Integration Testing (JUnit5)</strong></h4></li>
 
                 </UL>
 
@@ -123,23 +111,22 @@ const About = () => (
                 <br/>
                 <br/>
                 <br/>
-                <h2>We are non-formal tech education provider.</h2>
+                <h2><strong>We are non-formal tech education provider.</strong></h2>
                 <br/>
                 {/*<h3>A digital learning environment that manages content and learners.</h3>*/}
                 <br/>
-                <h3>We value quality.</h3>
+                <h3><strong>We value quality.</strong></h3>
 
 
             </DivText>
             <EduDiv>
                 <h1><strong>Mission</strong></h1>
-                <p><Span>In7Minutes.</Span>'s mission is to provide 7-min high quality computer science mini lessons.
-                </p>
+                <p><strong><Span>In7Minutes.</Span>'s mission is to provide 7-min high quality computer science mini lessons.</strong></p>
             </EduDiv>
             <HobbyDiv>
                 <h1><strong>Vision</strong></h1>
-                <p><Span>In7Minutes.</Span>'s concept-based vision statement:</p>
-                <p><blockquote>"We Simplify."</blockquote></p>
+                <p><strong><Span>In7Minutes.</Span>'s concept-based vision statement:</strong></p>
+                <p><strong><blockquote>"We Simplify."</blockquote></strong></p>
             </HobbyDiv>
 
         </Article>

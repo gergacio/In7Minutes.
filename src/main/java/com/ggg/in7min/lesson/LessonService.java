@@ -17,12 +17,12 @@ public class LessonService {
     public List<Lesson> getAllLessons() {return lessonRepository.findAll();}
 
     public void addLesson(Lesson lesson) {
-        //if email is taken throw error
+        //if title is taken throw error
         Boolean existsTitle = lessonRepository
                 .selectExistsTitle(lesson.getTitle());
         if (existsTitle) {
             throw new BadRequestException(
-                    "Email " + lesson.getTitle() + " taken");
+                    "Title " + lesson.getTitle() + " taken");
         }
         lessonRepository.save(lesson);
         //use rest client to test APIs

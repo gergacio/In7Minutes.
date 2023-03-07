@@ -32,25 +32,22 @@ const NavBar = () => {
 
         <UL>
             <LI>
-                <StyledLink to="/">Home</StyledLink>
+                <StyledLink to="/"><strong>Home</strong></StyledLink>
             </LI>
             <LI>
-                <StyledLink to="/about">About</StyledLink>
+                <StyledLink to="/about"><strong>About</strong></StyledLink>
             </LI>
             <LI>
-                <StyledLink to="/courses">Courses</StyledLink>
+                <StyledLink to="/courses"><strong>Courses</strong></StyledLink>
             </LI>
             <LI>
-                <StyledLink to="/lessons">Lessons</StyledLink>
+                <StyledLink to="/lessons"><strong>Lessons</strong></StyledLink>
             </LI>
             <LI>
-                <StyledLink to="/create">Create</StyledLink>
+                <StyledLink to="/students"><strong>Students</strong></StyledLink>
             </LI>
             <LI>
-                <StyledLink to="/students">Students</StyledLink>
-            </LI>
-            <LI>
-                <StyledLink to="/bookings">Bookings</StyledLink>
+                <StyledLink to="/bookings"><strong>Bookings</strong></StyledLink>
             </LI>
 
         </UL>

@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import {deleteStudent, getAllStudents} from "../services/StudentService";
+import {deleteLesson, getAllLessons} from "../services/LessonService";
 import {
     Layout,
     Table,
@@ -17,9 +17,9 @@ import {
     LoadingOutlined,
     PlusOutlined
 } from '@ant-design/icons';
-import StudentDrawerForm from "../StudentDrawerForm";
-
+import LessonDrawerForm from "../LessonDrawerForm";
 import {errorNotification, successNotification} from "../Notification";
+
 
 
 
@@ -37,9 +37,9 @@ const TheAvatar = ({name}) => {
         {`${name.charAt(0)}${name.charAt(name.length - 1)}`}
     </Avatar>
 }
-const removeStudent = (studentId, callback) => {
-    deleteStudent(studentId).then(() => {
-        successNotification("Student deleted", `Student with ${studentId} was deleted`);
+const removeLesson = (lessonId, callback) => {
+    deleteLesson(lessonId).then(() => {
+        successNotification("Lesson deleted", `Lesson with ${lessonId} was deleted`);
         callback();
     }).catch(err => {
         err.response.json().then(res => {
@@ -52,13 +52,13 @@ const removeStudent = (studentId, callback) => {
     })
 }
 
-const columns = fetchStudents => [
+const columns = fetchLessons => [
     {
         title: '',
         dataIndex: 'avatar',
         key: 'avatar',
-        render: (text, student) =>
-            <TheAvatar name={student.name}/>
+        render: (text, lesson) =>
+            <TheAvatar name={lesson.title}/>
     },
     {
         title: 'Id',
@@ -66,51 +66,46 @@ const columns = fetchStudents => [
         key: 'id',
     },
     {
-        title: 'Name',
-        dataIndex: 'name',
-        key: 'name',
+        title: 'Title',
+        dataIndex: 'title',
+        key: 'title',
     },
     {
-        title: 'Email',
-        dataIndex: 'email',
-        key: 'email',
-    },
-    {
-        title: 'Gender',
-        dataIndex: 'gender',
-        key: 'gender',
+        title: 'Content',
+        dataIndex: 'content',
+        key: 'content',
     },
     {
         title: 'Actions',
         key: 'actions',
-        render: (text, student) =>
+        render: (text, lesson) =>
             <Radio.Group>
                 <Popconfirm
                     placement='topRight'
-                    title={`Are you sure to delete ${student.name}`}
-                    onConfirm={() => removeStudent(student.id, fetchStudents)}
+                    title={`Are you sure to delete ${lesson.title}`}
+                    onConfirm={() => removeLesson(lesson.id, fetchLessons)}
                     okText='Yes'
                     cancelText='No'>
                     <Radio.Button value="small">Delete</Radio.Button>
                 </Popconfirm>
-                <Radio.Button onClick={() => alert("TODO: Implement edit student")} value="small">Edit</Radio.Button>
+                <Radio.Button onClick={() => alert("TODO: Implement edit lesson")} value="small">Edit</Radio.Button>
             </Radio.Group>
     }
 ];
 
 const antIcon = <LoadingOutlined style={{fontSize: 24}} spin/>;
 
-const StudentContainer = () => {
-    const [students, setStudents] = useState([]);
+const LessonContainer = () => {
+    const [lessons, setLessons] = useState([]);
     const [fetching, setFetching] = useState(true);
     const [showDrawer, setShowDrawer] = useState(false);
 
-    const fetchStudents = () =>
-        getAllStudents()
+    const fetchLessons = () =>
+        getAllLessons()
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                setStudents(data);
+                setLessons(data);
             }).catch(err => {
             console.log(err.response)
             err.response.json().then(res => {
@@ -124,53 +119,53 @@ const StudentContainer = () => {
 
     useEffect(() => {
         console.log("component is mounted");
-        fetchStudents();
+        fetchLessons();
     }, []);
 
-    const renderStudents = () => {
+    const renderLessons = () => {
         if (fetching) {
             return <Spin indicator={antIcon}/>
         }
-        if (students.length <= 0) {
+        if (lessons.length <= 0) {
             return <>
                 <Button
                     onClick={() => setShowDrawer(!showDrawer)}
                     type="primary" shape="square" icon={<PlusOutlined/>} size="small">
                     Add New Student
                 </Button>
-                <StudentDrawerForm
+                <LessonDrawerForm
                     showDrawer={showDrawer}
                     setShowDrawer={setShowDrawer}
-                    fetchStudents={fetchStudents}
+                    fetchLessons={fetchLessons}
                 />
                 <Empty/>
             </>
         }
         return <>
-            <StudentDrawerForm
+            <LessonDrawerForm
                 showDrawer={showDrawer}
                 setShowDrawer={setShowDrawer}
-                fetchStudents={fetchStudents}
+                fetchLessons={fetchLessons}
             />
             <Table
-                dataSource={students}
-                columns={columns(fetchStudents)}
+                dataSource={lessons}
+                columns={columns(fetchLessons)}
                 bordered
                 title={() =>
                     <>
-                        <Tag>Number of students</Tag>
-                        <Badge count={students.length} className="site-badge-count-4"/>
+                        <Tag>Number of lessons</Tag>
+                        <Badge count={lessons.length} className="site-badge-count-4"/>
                         <br/><br/>
                         <Button
                             onClick={() => setShowDrawer(!showDrawer)}
                             type="primary" shape="square" icon={<PlusOutlined/>} size="small">
-                            Add New Student
+                            Add New Lesson
                         </Button>
                     </>
                 }
                 pagination={{pageSize: 50}}
                 scroll={{y: 500}}
-                rowKey={student => student.id}
+                rowKey={lesson => lesson.id}
             />
         </>
     }
@@ -179,21 +174,12 @@ const StudentContainer = () => {
         <Layout className="site-layout">
             <Content style={{margin: '0 16px'}}>
                 <div className="site-layout-background" style={{padding: 24, minHeight: 360}}>
-                    {renderStudents()}
+                    {renderLessons()}
                 </div>
             </Content>
-            {/*<Footer style={{textAlign: 'center'}}>*/}
-            {/*    <div><Image*/}
-            {/*        width={75}*/}
-            {/*        src="https://user-images.githubusercontent.com/12120885/222685356-554f43ca-440f-446a-b229-a3c35ea61e46.png"*/}
-            {/*    />*/}
-            {/*    </div>*/}
-            {/*    <small>Copyright © 2023 3GBG®. All rights reserved.</small>*/}
-            {/*</Footer>*/}
-
         </Layout>
     </Layout>)
 
 }
 
-export default StudentContainer;
+export default LessonContainer;
