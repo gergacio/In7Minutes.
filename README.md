@@ -1,4 +1,4 @@
-# In7Min is non-formal tech education provider.
+# In7Minutes is non-formal tech education provider.
 
 ## Tools and technologies used:
 #### ✅ Spring Boot 3
