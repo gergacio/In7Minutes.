@@ -121,13 +121,15 @@ const About = () => (
 
             </DivText>
             <EduDiv>
-                <h1><strong>Mission</strong></h1>
-                <h3><strong>Our mission is to provide high quality computer science mini lessons.</strong></h3>
+                <h1><strong>Vision</strong></h1>
+                <h3><strong>Our concept-based vision statement is "WE SIMPLIFY".</strong></h3>
 
             </EduDiv>
             <HobbyDiv>
-                <h1><strong>Vision</strong></h1>
-                <h3><strong>Our concept-based vision statement is "WE SIMPLIFY".</strong></h3>
+
+
+                <h1><strong>Mission</strong></h1>
+                <h3><strong>Our mission is to provide high quality computer science mini lessons.</strong></h3>
 
             </HobbyDiv>
 

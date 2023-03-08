@@ -91,7 +91,7 @@ function BookingDrawerForm({showDrawer, setShowDrawer, fetchBookings}) {
             <Row gutter={16}>
                 <Col span={12}>
                     <Form.Item
-                        name={["student", "Id"]}
+                        name={["student", "id"]}
                         label="Student Id"
                         rules={[{required: true, message: 'Please enter student id'}]}
                     >
@@ -115,11 +115,6 @@ function BookingDrawerForm({showDrawer, setShowDrawer, fetchBookings}) {
             <Row>
                 {submitting && <Spin indicator={antIcon} />}
             </Row>
-
-
-
-
-
         </Form>
     </Drawer>
 }
