@@ -43,9 +43,9 @@ const NavBar = () => {
             <LI>
                 <StyledLink to="/lessons"><strong>Lessons</strong></StyledLink>
             </LI>
-            <LI>
-                <StyledLink to="/create"><strong>Create</strong></StyledLink>
-            </LI>
+            {/*<LI>*/}
+            {/*    <StyledLink to="/create"><strong>Create</strong></StyledLink>*/}
+            {/*</LI>*/}
             <LI>
                 <StyledLink to="/students"><strong>Students</strong></StyledLink>
             </LI>

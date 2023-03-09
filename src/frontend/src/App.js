@@ -38,7 +38,7 @@ function App() {
                     <Route path="/about" element={< About />} />
                     <Route path="/courses" element={< CourseContainer />} />
                     <Route path="/lessons" element={< LessonContainer />} />
-                    <Route path="/create" element={< CreateForm />} />
+                    {/*<Route path="/create" element={< CreateForm />} />*/}
                     <Route path="/students" element={< StudentContainer />} />
                     <Route path="/bookings" element={< BookingContainer />} />
 

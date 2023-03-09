@@ -87,49 +87,55 @@ const About = () => (
     <Box>
         <Article>
             <DivImg>
-                <h1><strong><Span>In7Minutes.</Span> TECH STACK</strong></h1>
-                <hr></hr>
+                <h3><strong><Span>In7Minutes.</Span> TECH STACK</strong></h3>
+                <br/>
+                <br/>
                 <UL>
-                    <li><h4><strong> Spring Boot 3</strong></h4></li>
-                    <li><h4><strong> HTTP & API development</strong></h4></li>
-                    <li><h4><strong> Front-end development (React|Ant Design|Framer Motion)</strong></h4></li>
-                    <li><h4><strong> Maven Build Tool</strong></h4></li>
-                    <li><h4><strong> Database (Postgres on Docker)</strong></h4></li>
-                    <li><h4><strong> Spring Data JPA</strong></h4></li>
-                    <li><h4><strong> Server and Client Side Error Handling</strong></h4></li>
-                    <li><h4><strong> Packaging applications for deployment (Docker and Jib)</strong></h4></li>
-                    <li><h4><strong> AWS (RDS & Elastic Beanstalk)</strong></h4></li>
-                    <li><h4><strong> Software Deployment Automation (GitHub Actions)</strong></h4></li>
-                    <li><h4><strong> Software Deployment Monitoring (Slack)</strong></h4></li>
-                    <li><h4><strong> Unit and Integration Testing (JUnit5)</strong></h4></li>
+                    <li><h4> Spring Boot 3</h4></li>
+                    <li><h4> HTTP & API development</h4></li>
+                    <li><h4> Front-end development (React|Ant Design|Framer Motion)</h4></li>
+                    <li><h4> Maven Build Tool</h4></li>
+                    <li><h4> Database (Postgres on Docker)</h4></li>
+                    <li><h4> Spring Data JPA</h4></li>
+                    <li><h4> Server and Client Side Error Handling</h4></li>
+                    <li><h4> Packaging applications for deployment (Docker and Jib)</h4></li>
+                    <li><h4> AWS (RDS & Elastic Beanstalk)</h4></li>
+                    <li><h4> Software Deployment Automation (GitHub Actions)</h4></li>
+                    <li><h4> Software Deployment Monitoring (Slack)</h4></li>
+                    <li><h4> Unit and Integration Testing (JUnit5)</h4></li>
+                    <br/>
 
                 </UL>
 
 
             </DivImg>
             <DivText>
-                <h1><strong>About Us</strong></h1>
+                <h2><strong>About Us</strong></h2>
+                <br/>
+                <hr></hr>
                 <br/>
                 <br/>
                 <br/>
-                <h2><strong>We are non-formal tech education provider.</strong></h2>
+
+                <h3><strong>We are non-formal tech education provider.</strong></h3>
                 <br/>
                 {/*<h3>A digital learning environment that manages content and learners.</h3>*/}
                 <br/>
-                <h3><strong>We value quality.</strong></h3>
+                <h4><strong>We value quality.</strong></h4>
+
 
 
             </DivText>
             <EduDiv>
-                <h1><strong>Vision</strong></h1>
-                <h3><strong>Our concept-based vision statement is "WE SIMPLIFY".</strong></h3>
+                <h3><strong>Vision</strong></h3>
+                <h4>Our concept-based vision statement is “We simplify”.</h4>
 
             </EduDiv>
             <HobbyDiv>
 
 
-                <h1><strong>Mission</strong></h1>
-                <h3><strong>Our mission is to provide high quality computer science mini lessons.</strong></h3>
+                <h3><strong>Mission</strong></h3>
+                <h4>Our mission is to provide 7-min high quality computer science mini lessons.</h4>
 
             </HobbyDiv>
 

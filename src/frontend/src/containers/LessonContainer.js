@@ -19,6 +19,9 @@ import {
 } from '@ant-design/icons';
 import LessonDrawerForm from "../forms/LessonDrawerForm";
 import {errorNotification, successNotification} from "../Notification";
+import styled from 'styled-components';
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 const {Content} = Layout;
 const TheAvatar = ({name}) => {
@@ -71,6 +74,23 @@ const columns = fetchLessons => [
         title: 'Content',
         dataIndex: 'content',
         key: 'content',
+        render: (text, lesson) => {
+               const a = <CKEditor
+                    editor={ClassicEditor}
+                    config={{
+
+                        removePlugins: [ 'Heading', 'Link', 'CKFinder' ,'ImageToolbar', 'toolbar'],
+                        toolbar: []
+                    }}
+                    data={text}
+                    // disabled={true}
+
+                />
+
+            return a;
+
+        }
+
     },
     {
         title: 'Actions',
