@@ -86,7 +86,7 @@ const columns = fetchCourses => [
                     onConfirm={() => removeStudent(course.id, fetchCourses)}
                     okText='Yes'
                     cancelText='No'>
-                    <Radio.Button value="small">Delete</Radio.Button>
+                    <Radio.Button value="small">Delete <span>❌</span></Radio.Button>
                 </Popconfirm>
                 <Radio.Button onClick={() => alert("TODO: Implement edit course")} value="small">Edit</Radio.Button>
             </Radio.Group>

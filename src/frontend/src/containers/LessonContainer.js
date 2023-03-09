@@ -20,9 +20,6 @@ import {
 import LessonDrawerForm from "../forms/LessonDrawerForm";
 import {errorNotification, successNotification} from "../Notification";
 
-
-
-
 const {Content} = Layout;
 const TheAvatar = ({name}) => {
     let trim = name.trim();
@@ -82,11 +79,11 @@ const columns = fetchLessons => [
             <Radio.Group>
                 <Popconfirm
                     placement='topRight'
-                    title={`Are you sure to delete ${lesson.title}`}
+                    title={`Are you sure to delete ${lesson.name}`}
                     onConfirm={() => removeLesson(lesson.id, fetchLessons)}
                     okText='Yes'
                     cancelText='No'>
-                    <Radio.Button value="small">Delete</Radio.Button>
+                    <Radio.Button value="small">Delete <span>❌</span></Radio.Button>
                 </Popconfirm>
                 <Radio.Button onClick={() => alert("TODO: Implement edit lesson")} value="small">Edit</Radio.Button>
             </Radio.Group>
@@ -131,7 +128,7 @@ const LessonContainer = () => {
                 <Button
                     onClick={() => setShowDrawer(!showDrawer)}
                     type="primary" shape="square" icon={<PlusOutlined/>} size="small">
-                    Add New Student
+                    Add New Lesson
                 </Button>
                 <LessonDrawerForm
                     showDrawer={showDrawer}

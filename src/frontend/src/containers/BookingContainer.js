@@ -91,7 +91,7 @@ const columns = fetchBookings => [
                     onConfirm={() => removeBooking(booking.id, fetchBookings)}
                     okText='Yes'
                     cancelText='No'>
-                    <Radio.Button value="small">Delete</Radio.Button>
+                    <Radio.Button value="small">Delete <span> ❌</span></Radio.Button>
                 </Popconfirm>
                 <Radio.Button onClick={() => alert("TODO: Implement edit booking")} value="small">Edit</Radio.Button>
             </Radio.Group>

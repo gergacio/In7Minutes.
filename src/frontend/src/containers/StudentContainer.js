@@ -1,3 +1,4 @@
+
 import {useState, useEffect} from 'react'
 import {deleteStudent, getAllStudents} from "../services/StudentService";
 import {
@@ -91,7 +92,7 @@ const columns = fetchStudents => [
                     onConfirm={() => removeStudent(student.id, fetchStudents)}
                     okText='Yes'
                     cancelText='No'>
-                    <Radio.Button value="small">Delete</Radio.Button>
+                    <Radio.Button value="small">Delete <span>❌</span></Radio.Button>
                 </Popconfirm>
                 <Radio.Button onClick={() => alert("TODO: Implement edit student")} value="small">Edit</Radio.Button>
             </Radio.Group>

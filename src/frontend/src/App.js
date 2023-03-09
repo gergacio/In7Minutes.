@@ -12,6 +12,7 @@ import ErrorPage from "./components/ErrorPage";
 import LessonContainer from "./containers/LessonContainer";
 import CourseContainer from "./containers/CourseContainer";
 import BookingContainer from "./containers/BookingContainer";
+import CreateForm from "./components/CreateForm";
 
 
 
@@ -37,6 +38,7 @@ function App() {
                     <Route path="/about" element={< About />} />
                     <Route path="/courses" element={< CourseContainer />} />
                     <Route path="/lessons" element={< LessonContainer />} />
+                    <Route path="/create" element={< CreateForm />} />
                     <Route path="/students" element={< StudentContainer />} />
                     <Route path="/bookings" element={< BookingContainer />} />
 

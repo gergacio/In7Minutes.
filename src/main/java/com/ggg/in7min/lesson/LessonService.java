@@ -1,13 +1,12 @@
 package com.ggg.in7min.lesson;
 
-import com.ggg.in7min.student.Student;
-import com.ggg.in7min.student.StudentRepository;
 import com.ggg.in7min.student.exception.BadRequestException;
 import com.ggg.in7min.student.exception.StudentNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @AllArgsConstructor
 @Service
@@ -15,6 +14,8 @@ public class LessonService {
     private final LessonRepository lessonRepository;
     //define methods
     public List<Lesson> getAllLessons() {return lessonRepository.findAll();}
+
+
 
     public void addLesson(Lesson lesson) {
         //if title is taken throw error
@@ -33,5 +34,9 @@ public class LessonService {
                     "Lesson with id " + lessonId + " does not exists");
         }
         lessonRepository.deleteById(lessonId);
+    }
+
+    public Optional<Lesson> getLesson(Long lessonId) {
+        return lessonRepository.findById(lessonId);
     }
 }
