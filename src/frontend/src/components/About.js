@@ -92,7 +92,6 @@ const About = () => (
                 <br/>
                 <UL>
                     <li><h4> Database  (PostgreSQL)</h4></li>
-                    <li><h4> Build Automation Tool (Maven)</h4></li>
                     <li><h4> HTTP & API development (Spring Boot 3)</h4></li>
                     <li><h4> Front-end development (React|Ant Design|Framer Motion)</h4></li>
                     <li><h4> Cloud Technologies (AWS - S3|RDS|EC2|Elastic Beanstalk)</h4></li>

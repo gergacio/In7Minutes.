@@ -8,7 +8,7 @@ import AcademyText from "./AcademyText";
 
 const spintransition = {
     loop: Infinity,
-    duration: 5
+    duration: 4
 }
 
 const AcademyTextLogo = () => {
@@ -16,7 +16,7 @@ const AcademyTextLogo = () => {
     return(
         <motion.div
             animate={{y:10,x:10, scale:1.3}}
-            initial={{scale:-10}}
+            initial={{scale: 0}}
             transition={spintransition}
         >
             {<AcademyText />}

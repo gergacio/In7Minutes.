@@ -18,7 +18,11 @@ const AcademyText = () => {
 
     return(
         <LogoHeading>
-            <h4><strong>In7Minutes.</strong></h4>
+            <div>
+                <h4><strong>In7Minutes.</strong></h4>
+
+            </div>
+
 
         </LogoHeading>
 
