@@ -1,4 +1,4 @@
-# In7Minutes is non-formal tech education provider.
+# In7Minutes is learning management system.
 
 ## Tools and technologies used:
 #### ✅ Spring Boot 3
