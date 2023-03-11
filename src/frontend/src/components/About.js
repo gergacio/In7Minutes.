@@ -91,6 +91,7 @@ const About = () => (
                 <h3><strong><Span>In7Minutes.</Span> TECH STACK</strong></h3>
                 <br/>
                 <UL>
+                    <li><h4> IDE  (Intellij IDEA)</h4></li>
                     <li><h4> Database  (PostgreSQL)</h4></li>
                     <li><h4> HTTP & API development (Spring Boot 3)</h4></li>
                     <li><h4> Front-end development (React|Ant Design|Framer Motion)</h4></li>
