@@ -1,12 +1,12 @@
+#
 # Learning Management System
-###
-###
-###
-#![image info](images/Logo.png)
-###
-###
+#
+#
+![image info](images/Logo.png)
+#
+#
 ## Tools and technologies used:
-###
+#
 #### ✅ Database (PostgreSQL)
 #### ✅ HTTP & API development (Spring Boot 3)
 #### ✅ Front-end development (HTML | CSS | JS | React | Ant Design | Framer Motion)
@@ -17,4 +17,5 @@
 #### ✅ Unit and Integration Testing (JUnit5)
 ###
 ###
+![image info](images/diagram.png)
 
