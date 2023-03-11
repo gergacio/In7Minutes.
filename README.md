@@ -2,8 +2,8 @@
 
 ## Tools and technologies used:
 ###
-#### ✅ HTTP & API development (Spring Boot 3)
 #### ✅ Database (PostgreSQL)
+#### ✅ HTTP & API development (Spring Boot 3)
 #### ✅ Front-end development (HTML|CSS|JS|React|Ant Design|Framer Motion)
 #### ✅ Cloud Technologies (AWS - S3|RDS|EC2|Elastic Beanstalk)
 #### ✅ Packaging applications for deployment (Docker and Jib)
