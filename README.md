@@ -1,14 +1,12 @@
 # In7Minutes is learning management system.
 
 ## Tools and technologies used:
-#### ✅ Spring Boot 3
-#### ✅ HTTP & API development
-#### ✅ JavaScript and React for front-end development (React.js Hooks and Functions Components)
-#### ✅ Maven Build Tool
-#### ✅ Spring Data JPA
-#### ✅ Server and Client Side Error Handling
+###
+#### ✅ HTTP & API development (Spring Boot 3)
+#### ✅ Database (PostgreSQL)
+#### ✅ front-end development (HTML|CSS|JS|React|Ant Design|Framer Motion)
+#### ✅ Cloud Technologies (AWS - S3|RDS|EC2|Elastic Beanstalk)
 #### ✅ Packaging applications for deployment (Docker and Jib)
-#### ✅ AWS (RDS & Elastic Beanstalk)
 #### ✅ Software Deployment Automation (GitHub Actions)
 #### ✅ Software Deployment Monitoring (Slack)
 #### ✅ Unit and Integration Testing (JUnit5)
