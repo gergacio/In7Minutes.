@@ -15,6 +15,6 @@ public interface LessonRepository extends JpaRepository<Lesson, Long> {
             "FROM Lesson l " +
             "WHERE l.title = ?1"
     )
-    Boolean selectExistsTitle(String email);
+    Boolean selectExistsTitle(String title);
 
 }

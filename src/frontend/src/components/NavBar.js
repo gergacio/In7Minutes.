@@ -38,19 +38,16 @@ const NavBar = () => {
                 <StyledLink to="/about"><strong>About</strong></StyledLink>
             </LI>
             <LI>
-                <StyledLink to="/courses"><strong>Courses</strong></StyledLink>
+                <StyledLink to="/bookings"><strong>Bookings</strong></StyledLink>
             </LI>
             <LI>
-                <StyledLink to="/lessons"><strong>Lessons</strong></StyledLink>
+                <StyledLink to="/courses"><strong>Courses</strong></StyledLink>
             </LI>
-            {/*<LI>*/}
-            {/*    <StyledLink to="/create"><strong>Create</strong></StyledLink>*/}
-            {/*</LI>*/}
             <LI>
                 <StyledLink to="/students"><strong>Students</strong></StyledLink>
             </LI>
             <LI>
-                <StyledLink to="/bookings"><strong>Bookings</strong></StyledLink>
+                <StyledLink to="/lessons"><strong>Lessons</strong></StyledLink>
             </LI>
 
         </UL>

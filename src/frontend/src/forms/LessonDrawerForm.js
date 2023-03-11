@@ -51,7 +51,7 @@ function LessonDrawerForm({showDrawer, setShowDrawer, fetchLessons}) {
     };
     return <Drawer
         title="Create new lesson"
-        width={400}
+        width={720}
         onClose={onCLose}
         visible={showDrawer}
         bodyStyle={{
@@ -86,7 +86,38 @@ function LessonDrawerForm({showDrawer, setShowDrawer, fetchLessons}) {
 
                     </Form.Item>
                 </Col>
+                <Col span={12}>
+                    <Form.Item
+                        name={["course", "id"]}
+                        label="Course Id"
+                        rules={[{required: true, message: 'Please enter course id'}]}
+                    >
+                        <Input placeholder="Please enter course id"/>
+                    </Form.Item>
+                </Col>
 
+            </Row >
+            <Row gutter={16}>
+                <Col span={12}>
+                    <Form.Item
+                        name="learningObjective"
+                        label="Learning Objective"
+                        rules={[{required: true, message: 'Please enter lesson learning objective'}]}
+                    >
+                        <Input placeholder="Please enter lesson learning objective"/>
+
+                    </Form.Item>
+                </Col>
+                <Col span={12}>
+                    <Form.Item
+                        name="learningGoal"
+                        label="Learning Goal"
+                        rules={[{required: true, message: 'Please enter lesson learning goal'}]}
+                    >
+                        <Input placeholder="Please enter lesson learning goal"/>
+
+                    </Form.Item>
+                </Col>
             </Row >
             <Row gutter={16}>
                 <Col span={12}>

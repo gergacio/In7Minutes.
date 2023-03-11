@@ -2,11 +2,13 @@ package com.ggg.in7min.course;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.ggg.in7min.booking.Booking;
+import com.ggg.in7min.lesson.Lesson;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @ToString
@@ -39,9 +41,15 @@ public class Course {
     @OneToMany(mappedBy = "course", fetch = FetchType.LAZY,cascade=CascadeType.REMOVE)
     private List<Booking> bookings;
 
+    @JsonIgnoreProperties({"course"})
+    @OneToMany(mappedBy = "course", fetch = FetchType.LAZY,cascade=CascadeType.REMOVE)
+    private List<Lesson> lessons;
+
     public Course(String name, String description) {
         this.name = name;
         this.description = description;
         this.bookings = new ArrayList<>();
+        this.lessons = new ArrayList<>();
+
     }
 }

@@ -39,7 +39,7 @@ const TheAvatar = ({name}) => {
 }
 const removeStudent = (courseId, callback) => {
     deleteCourse(courseId).then(() => {
-        successNotification("Course deleted", `Course with ${courseId} was deleted`);
+        successNotification("Course deleted", `Course with id: ${courseId} was deleted`);
         callback();
     }).catch(err => {
         err.response.json().then(res => {

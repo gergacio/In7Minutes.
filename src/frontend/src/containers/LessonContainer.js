@@ -1,25 +1,9 @@
 import {useState, useEffect} from 'react'
 import {deleteLesson, getAllLessons} from "../services/LessonService";
-import {
-    Layout,
-    Table,
-    Spin,
-    Empty,
-    Button,
-    Badge,
-    Tag,
-    Avatar,
-    Radio, Popconfirm
-} from 'antd';
-
-import {
-    UserOutlined,
-    LoadingOutlined,
-    PlusOutlined
-} from '@ant-design/icons';
+import {Layout, Table, Spin, Empty, Button, Badge, Tag, Avatar, Radio, Popconfirm} from 'antd';
+import {UserOutlined, LoadingOutlined, PlusOutlined} from '@ant-design/icons';
 import LessonDrawerForm from "../forms/LessonDrawerForm";
 import {errorNotification, successNotification} from "../Notification";
-import styled from 'styled-components';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
@@ -39,7 +23,7 @@ const TheAvatar = ({name}) => {
 }
 const removeLesson = (lessonId, callback) => {
     deleteLesson(lessonId).then(() => {
-        successNotification("Lesson deleted", `Lesson with ${lessonId} was deleted`);
+        successNotification("Lesson deleted", `Lesson with id: ${lessonId} was deleted`);
         callback();
     }).catch(err => {
         err.response.json().then(res => {
@@ -51,7 +35,6 @@ const removeLesson = (lessonId, callback) => {
         });
     })
 }
-
 const columns = fetchLessons => [
     {
         title: '',
@@ -63,60 +46,54 @@ const columns = fetchLessons => [
     {
         title: 'Id',
         dataIndex: 'id',
-        key: 'id',
+        key: 'id'
     },
     {
         title: 'Title',
         dataIndex: 'title',
-        key: 'title',
+        key: 'title'
     },
     {
-        title: 'Content',
-        dataIndex: 'content',
-        key: 'content',
-        render: (text, lesson) => {
-               const a = <CKEditor
-                    editor={ClassicEditor}
-                    config={{
+        title: 'Course Name',
+        dataIndex: ["course", "name"],
+        key: ["course", "name"],
+    },
+    {
+        title: 'Learning Objective',
+        dataIndex: 'learningObjective',
+        key: 'learningObjective'
 
-                        removePlugins: [ 'Heading', 'Link', 'CKFinder' ,'ImageToolbar', 'toolbar'],
-                        toolbar: []
-                    }}
-                    data={text}
-                    // disabled={true}
-
-                />
-
-            return a;
-
-        }
+    },
+    {
+        title: 'Learning Goal',
+        dataIndex: 'learningGoal',
+        key: 'learningGoal'
 
     },
     {
         title: 'Actions',
         key: 'actions',
         render: (text, lesson) =>
-            <Radio.Group>
-                <Popconfirm
-                    placement='topRight'
-                    title={`Are you sure to delete ${lesson.name}`}
-                    onConfirm={() => removeLesson(lesson.id, fetchLessons)}
-                    okText='Yes'
-                    cancelText='No'>
-                    <Radio.Button value="small">Delete <span>❌</span></Radio.Button>
-                </Popconfirm>
-                <Radio.Button onClick={() => alert("TODO: Implement edit lesson")} value="small">Edit</Radio.Button>
-            </Radio.Group>
+            <>
+                <Radio.Group>
+                    <Popconfirm
+                        placement='topRight'
+                        title={`Are you sure to delete ${lesson.title}`}
+                        onConfirm={() => removeLesson(lesson.id, fetchLessons)}
+                        okText='Yes'
+                        cancelText='No'>
+                        <Radio.Button value="small">Delete <span>❌</span></Radio.Button>
+                        <Radio.Button onClick={() => alert("TODO: Implement edit student")} value="small">Edit</Radio.Button>
+                    </Popconfirm>
+                </Radio.Group>
+            </>
     }
 ];
-
 const antIcon = <LoadingOutlined style={{fontSize: 24}} spin/>;
-
 const LessonContainer = () => {
     const [lessons, setLessons] = useState([]);
     const [fetching, setFetching] = useState(true);
     const [showDrawer, setShowDrawer] = useState(false);
-
     const fetchLessons = () =>
         getAllLessons()
             .then(res => res.json())
@@ -167,6 +144,19 @@ const LessonContainer = () => {
             <Table
                 dataSource={lessons}
                 columns={columns(fetchLessons)}
+                expandable={{rowExpandable:(record) => true,
+                    expandedRowRender:(record)=> {
+                       return  <CKEditor
+                           editor={ClassicEditor}
+                           config={{
+                               removePlugins: [ 'Heading', 'Link', 'CKFinder' ,'ImageToolbar', 'toolbar'],
+                               toolbar: []
+                           }}
+                           data={record.content}
+                           disabled={true}
+                       />
+                    }
+                } }
                 bordered
                 title={() =>
                     <>
@@ -196,7 +186,5 @@ const LessonContainer = () => {
             </Content>
         </Layout>
     </Layout>)
-
 }
-
 export default LessonContainer;

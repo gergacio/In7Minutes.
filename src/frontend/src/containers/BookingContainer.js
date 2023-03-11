@@ -39,7 +39,7 @@ const {Content} = Layout;
 // }
 const removeBooking = (bookingId, callback) => {
     deleteBooking(bookingId).then(() => {
-        successNotification("Booking deleted", `Booking with ${bookingId} was deleted`);
+        successNotification("Booking deleted", `Booking with id: ${bookingId} was deleted`);
         callback();
     }).catch(err => {
         err.response.json().then(res => {

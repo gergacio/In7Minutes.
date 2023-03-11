@@ -41,7 +41,7 @@ display: grid;
 }
 `
 const DivImg = styled.div`
-padding: 15px;
+padding: 25px;
 background-color: #ffff00;
 color: #353935;
 grid-column: 6/11;
@@ -49,7 +49,7 @@ grid-row: 1/2;
 font-weight: 500;
 `
 const DivText = styled.div`
-padding: 15px;
+padding: 35px;
 background-color: #353935;
 color: white;
 grid-column: 1/6;
@@ -60,7 +60,7 @@ font-weight: 500;
 `
 
 const HobbyDiv = styled.div`
-padding: 15px;
+padding: 25px;
 background-color: #f5f5f5;
 color: #353935;
 grid-column: 1/6;
@@ -70,7 +70,7 @@ text-align: left;
 font-weight: 500;
 `
 const EduDiv = styled.div`
-padding: 15px;
+padding: 25px;
 background-color: #868888;
 color: white;
 grid-column: 6/11;
@@ -87,58 +87,45 @@ const About = () => (
     <Box>
         <Article>
             <DivImg>
+                <br/>
                 <h3><strong><Span>In7Minutes.</Span> TECH STACK</strong></h3>
                 <br/>
-                <br/>
                 <UL>
-                    <li><h4> Spring Boot 3</h4></li>
-                    <li><h4> HTTP & API development</h4></li>
+                    <li><h4> Database  (PostgreSQL)</h4></li>
+                    <li><h4> Build Automation Tool (Maven)</h4></li>
+                    <li><h4> HTTP & API development (Spring Boot 3)</h4></li>
                     <li><h4> Front-end development (React|Ant Design|Framer Motion)</h4></li>
-                    <li><h4> Maven Build Tool</h4></li>
-                    <li><h4> Database (Postgres on Docker)</h4></li>
-                    <li><h4> Spring Data JPA</h4></li>
-                    <li><h4> Server and Client Side Error Handling</h4></li>
+                    <li><h4> Cloud Technologies (AWS - S3|RDS|EC2|Elastic Beanstalk)</h4></li>
                     <li><h4> Packaging applications for deployment (Docker and Jib)</h4></li>
-                    <li><h4> AWS (RDS & Elastic Beanstalk)</h4></li>
                     <li><h4> Software Deployment Automation (GitHub Actions)</h4></li>
                     <li><h4> Software Deployment Monitoring (Slack)</h4></li>
                     <li><h4> Unit and Integration Testing (JUnit5)</h4></li>
                     <br/>
-
                 </UL>
-
-
             </DivImg>
             <DivText>
+                <br/>
                 <h2><strong>About Us</strong></h2>
                 <br/>
                 <hr></hr>
                 <br/>
                 <br/>
-                <br/>
-
                 <h3><strong>We are non-formal tech education provider.</strong></h3>
                 <br/>
                 {/*<h3>A digital learning environment that manages content and learners.</h3>*/}
                 <br/>
-                <h4><strong>We value quality.</strong></h4>
-
-
-
+                <h3><strong>We value quality.</strong></h3>
             </DivText>
             <EduDiv>
+                <br/>
                 <h3><strong>Vision</strong></h3>
                 <h4>Our concept-based vision statement is “We simplify”.</h4>
-
             </EduDiv>
             <HobbyDiv>
-
-
+                <br/>
                 <h3><strong>Mission</strong></h3>
                 <h4>Our mission is to provide 7-min high quality computer science mini lessons.</h4>
-
             </HobbyDiv>
-
         </Article>
 
     </Box>

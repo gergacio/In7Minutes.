@@ -12,20 +12,14 @@ import ErrorPage from "./components/ErrorPage";
 import LessonContainer from "./containers/LessonContainer";
 import CourseContainer from "./containers/CourseContainer";
 import BookingContainer from "./containers/BookingContainer";
-import CreateForm from "./components/CreateForm";
-
-
-
-
 
 //display parent as flex
 const StyledRouter = styled.div`
 width: 100%;
 display: flex;
 flex-direction: column;
-justify-content:space-between;
+justify-content:space-between;`
 
-`
 function App() {
     //render router with all routes(components)
     return (
@@ -38,10 +32,8 @@ function App() {
                     <Route path="/about" element={< About />} />
                     <Route path="/courses" element={< CourseContainer />} />
                     <Route path="/lessons" element={< LessonContainer />} />
-                    {/*<Route path="/create" element={< CreateForm />} />*/}
                     <Route path="/students" element={< StudentContainer />} />
                     <Route path="/bookings" element={< BookingContainer />} />
-
                     <Route path="*" element={< ErrorPage />}/>
                 </ Routes>
                 <Footer />
@@ -49,5 +41,4 @@ function App() {
         </Router>
     );
 }
-
 export default App;

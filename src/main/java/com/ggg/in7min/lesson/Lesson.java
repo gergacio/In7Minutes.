@@ -1,5 +1,7 @@
 package com.ggg.in7min.lesson;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.ggg.in7min.course.Course;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
@@ -27,19 +29,22 @@ public class Lesson {
     @NotBlank
     @Column(nullable = false)
     private String title;
-//    @Column(name = "learning_objective")
-//    private String learningObjective;
-//    @Column(name = "learning_goal")
-//    private String learningGoal;
-
+    @Column(name = "learning_objective")
+    private String learningObjective;
+    @Column(name = "learning_goal")
+    private String learningGoal;
     @Column(name = "content",length = Length.LOB_DEFAULT)
     private String content;
-//    @Column(name = "duration")
-//    private int duration;
+    @ManyToOne
+    @JsonIgnoreProperties({"lessons"})
+    @JoinColumn(name = "course_id", nullable = false)
+    private Course course;
 
-
-    public Lesson(String title, String content) {
+    public Lesson(String title, String learningObjective, String learningGoal, String content, Course course) {
         this.title = title;
+        this.learningObjective = learningObjective;
+        this.learningGoal = learningGoal;
         this.content = content;
+        this.course = course;
     }
 }

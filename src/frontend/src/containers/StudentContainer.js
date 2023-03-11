@@ -40,7 +40,7 @@ const TheAvatar = ({name}) => {
 }
 const removeStudent = (studentId, callback) => {
     deleteStudent(studentId).then(() => {
-        successNotification("Student deleted", `Student with ${studentId} was deleted`);
+        successNotification("Student deleted", `Student with id: ${studentId} was deleted`);
         callback();
     }).catch(err => {
         err.response.json().then(res => {
@@ -183,15 +183,6 @@ const StudentContainer = () => {
                     {renderStudents()}
                 </div>
             </Content>
-            {/*<Footer style={{textAlign: 'center'}}>*/}
-            {/*    <div><Image*/}
-            {/*        width={75}*/}
-            {/*        src="https://user-images.githubusercontent.com/12120885/222685356-554f43ca-440f-446a-b229-a3c35ea61e46.png"*/}
-            {/*    />*/}
-            {/*    </div>*/}
-            {/*    <small>Copyright © 2023 3GBG®. All rights reserved.</small>*/}
-            {/*</Footer>*/}
-
         </Layout>
     </Layout>)
 
