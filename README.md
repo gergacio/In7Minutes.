@@ -2,7 +2,7 @@
 ###
 ###
 ###
-![Logo.png](..%2F..%2F..%2F..%2FDesktop%2FLogo.png)
+#![image info](images/Logo.png)
 ###
 ###
 ## Tools and technologies used:
@@ -17,4 +17,4 @@
 #### ✅ Unit and Integration Testing (JUnit5)
 ###
 ###
-![Architecture-Diagram.png](..%2F..%2F..%2F..%2FDesktop%2FArchitecture-Diagram.png)
+
