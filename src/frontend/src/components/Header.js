@@ -18,7 +18,6 @@ padding: 15px;
 const Header = () => {
     return(
         <Box>
-            <br/>
             <NavBar />
         </Box>
     );

@@ -35,7 +35,7 @@ function App() {
                     <Route exact path="/" element={< Home />} />
                     <Route path="/about" element={< About />} />
                     <Route path="/courses" element={< CourseContainer />} />
-//                    <Route path="/lessons" element={< LessonContainer />} />
+                    <Route path="/lessons" element={< LessonContainer />} />
 //                    <Route path="/students" element={< StudentContainer />} />
 //                    <Route path="/bookings" element={< BookingContainer />} />
                     <Route path="*" element={< ErrorPage />}/>
