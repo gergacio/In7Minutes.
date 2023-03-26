@@ -45,8 +45,8 @@ display: grid;
 const TechStack = styled.div`
 //padding: 55px;
 
-border-right: 1rem solid #f5f5f5;
-border-left: 1rem solid #f5f5f5;
+border-right: 2rem solid #f5f5f5;
+border-left: 5rem solid #f5f5f5;
 background-color: #353935;
 font-weight: 500;
 grid-column: 8/11;
@@ -116,7 +116,7 @@ text-align: left;
 font-weight: 500;
 `
 const Vision1 = styled.div`
-padding: 2rem;
+padding: 3rem;
 background-color: yellow;
 grid-column: 5/11;
 grid-row: 4/4;
@@ -146,8 +146,10 @@ const About = () => (
                 <UL>
                     <br/>
                      <br/>
+                          <br/>
 
                     <li><h3><strong>Software Development</strong></h3></li>
+
                       <li><h4><strong> Databases -  MongoDB | H2 | PostgreSQL  </strong></h4></li>
 
                     <li><h4><strong> Code Editor / IDE - Visual Studio Code | Intellij IDEA </strong></h4></li>
@@ -159,6 +161,8 @@ const About = () => (
                     <li><h4><strong> Web Frameworks - Express | Spring Boot  </strong></h4></li>
                     <li><h4><strong> Testing Frameworks - Jest | JUnit </strong></h4></li>
                     <li><h4><strong> Text Editors - Notepad ++ | Vim </strong></h4></li>
+                             <br/>
+                                      <br/>
 
                     <li><h3><strong> DevOps </strong></h3></li>
                     <li><h4><strong> Cloud - Amazon Web Services S3 | RDS | EC2 | Elastic Beanstalk </strong></h4></li>
@@ -169,6 +173,7 @@ const About = () => (
 
                       <br/>
                     <br/>
+                             <br/>
 
                 </UL>
                 <br/>
