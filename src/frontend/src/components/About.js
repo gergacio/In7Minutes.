@@ -24,7 +24,7 @@ const UL = styled.ul`
 padding-left: 8rem;
   justify-content: flex-end;
   list-style:none;
-  background-color: #f5f5f5;
+  background-color: #f2f2f2;
 
 `
 const Article = styled.article`
