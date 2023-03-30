@@ -149,13 +149,13 @@ const About = () => (
                           <br/>
 
                     <li><h3><strong>Software Development</strong></h3></li>
-
+                      <li><h4><strong> Project Management -  Trello  </strong></h4></li>
                       <li><h4><strong> Databases -  MongoDB | H2 | PostgreSQL  </strong></h4></li>
 
                     <li><h4><strong> Code Editor / IDE - Visual Studio Code | Intellij IDEA </strong></h4></li>
 
 
-                    <li><h4><strong> Programming Languages - SQL | JavaScript | Java  </strong></h4></li>
+                    <li><h4><strong> Programming Languages - SQL | JavaScript | Java | Python </strong></h4></li>
 
                     <li><h4><strong> Front-end Dev Tools - HTML | CSS | React | Ant Design | Framer Motion</strong></h4></li>
                     <li><h4><strong> Web Frameworks - Express | Spring Boot  </strong></h4></li>

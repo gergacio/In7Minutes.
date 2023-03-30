@@ -31,10 +31,10 @@ public class Lesson {
     @NotBlank
     @Column(nullable = false)
     private String title;
-    @Column(name = "learning_objective")
-    private String learningObjective;
-    @Column(name = "learning_goal")
-    private String learningGoal;
+//    @Column(name = "learning_objective")
+//    private String learningObjective;
+//    @Column(name = "learning_goal")
+//    private String learningGoal;
     @Column(name = "content",length = Length.LOB_DEFAULT)
     private String content;
     @ManyToOne
@@ -42,10 +42,10 @@ public class Lesson {
     @JoinColumn(name = "course_id", nullable = false)
     private Course course;
 
-    public Lesson(String title, String learningObjective, String learningGoal, String content, Course course) {
+    public Lesson(String title, String content, Course course) {
         this.title = title;
-        this.learningObjective = learningObjective;
-        this.learningGoal = learningGoal;
+//        this.learningObjective = learningObjective;
+//        this.learningGoal = learningGoal;
         this.content = content;
         this.course = course;
     }

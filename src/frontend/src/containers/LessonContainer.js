@@ -59,18 +59,6 @@ const columns = fetchLessons => [
         key: ["course", "name"],
     },
     {
-        title: 'Learning Objective',
-        dataIndex: 'learningObjective',
-        key: 'learningObjective'
-
-    },
-    {
-        title: 'Learning Goal',
-        dataIndex: 'learningGoal',
-        key: 'learningGoal'
-
-    },
-    {
         title: 'Actions',
         key: 'actions',
         render: (text, lesson) =>
@@ -148,9 +136,14 @@ const LessonContainer = () => {
                     expandedRowRender:(record)=> {
                        return  <CKEditor
                            editor={ClassicEditor}
+
                            config={{
                                removePlugins: [ 'Heading', 'Link', 'CKFinder' ,'ImageToolbar', 'toolbar'],
-                               toolbar: [],
+                               toolbar: ['TextColor', 'BGColor'],
+
+
+
+
                                fontSize: {
                                    options: [
                                        'tiny',
