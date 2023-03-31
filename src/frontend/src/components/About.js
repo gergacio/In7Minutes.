@@ -149,7 +149,7 @@ const About = () => (
                           <br/>
 
                     <li><h3><strong>Software Development</strong></h3></li>
-                      <li><h4><strong> Project Management -  Trello  </strong></h4></li>
+                      <li><h4><strong> Project Management -  Jira  </strong></h4></li>
                       <li><h4><strong> Databases -  MongoDB | H2 | PostgreSQL  </strong></h4></li>
 
                     <li><h4><strong> Code Editor / IDE - Visual Studio Code | Intellij IDEA </strong></h4></li>

@@ -25,28 +25,26 @@ public class CourseService {
         if (existsName) {
             throw new BadRequestException(
                     "Name " + course.getName() + " taken");
+        } else{
+
+            throw new UnauthorizedException(
+                    "You are not authorized to perform this operation.");
         }
-//        else{
-//
-//            throw new UnauthorizedException(
-//                    "You are not authorized to perform this operation.");
-//        }
 //                TODO: Implement security
-        courseRepository.save(course);
+//        courseRepository.save(course);
         //use rest client to test APIs
     }
     public void deleteCourse(Long courseId) {
         if(!courseRepository.existsById(courseId)) {
             throw new CourseNotFoundException(
                     "Course with id " + courseId + " does not exists");
+        } else{
+
+            throw new UnauthorizedException(
+                    "You are not authorized to perform this operation.");
         }
-//        else{
-//
-//            throw new UnauthorizedException(
-//                    "You are not authorized to perform this operation.");
-//        }
 ////        TODO: Implement security
-        courseRepository.deleteById(courseId);
+//        courseRepository.deleteById(courseId);
 
     }
 }
