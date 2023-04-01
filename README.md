@@ -7,7 +7,7 @@
 ###
 ###
 #
-![image info](images/Logo.png)
+![image info](images/logo.png)
 #
 ###
 ###
@@ -16,7 +16,7 @@
 ###
 ###
 ###
-## Tools and technologies used:
+## Tools and technologies used
 ###
 ###
 ###
@@ -34,3 +34,16 @@
 ###
 ###
 ###
+## Architecture Diagram
+###
+###
+###
+###
+###
+![image info](images/architecture.png)
+###
+###
+###
+###
+###
+
