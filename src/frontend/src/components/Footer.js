@@ -15,7 +15,7 @@ const Footer = () => (
     <Box>
 
         <br/>
-        <p>© <strong>in7min</strong> 2023 | Privacy policy | How we use cookies | Website feedback | Accessibility Statement</p>
+//        <p>© <strong>in7min</strong> 2023 | Privacy policy | How we use cookies | Website feedback | Accessibility Statement</p>
         <br/>
 
 
