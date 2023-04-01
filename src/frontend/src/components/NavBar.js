@@ -49,9 +49,7 @@ const NavBar = () => {
                  <LI>
                       <StyledLink to="/lessons"><strong>Mini lessons</strong></StyledLink>
                  </LI>
-                  <LI>
-                       <StyledLink to="/bookings"><strong>Admin</strong></StyledLink>
-                  </LI>
+
             </UL>
 
     </>
