@@ -50,7 +50,7 @@ const NavBar = () => {
                       <StyledLink to="/lessons"><strong>Mini lessons</strong></StyledLink>
                  </LI>
                   <LI>
-                       <StyledLink to="/admin"><strong>Admin</strong></StyledLink>
+                       <StyledLink to="/bookings"><strong>Admin</strong></StyledLink>
                   </LI>
             </UL>
 

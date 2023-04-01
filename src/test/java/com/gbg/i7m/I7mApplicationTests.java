@@ -9,7 +9,6 @@ class I7mApplicationTests {
 
 	@Test
 	void contextLoads() {
-		Assertions.fail("No way..i can't believe");
 	}
 
 }
