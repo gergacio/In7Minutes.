@@ -29,7 +29,7 @@
 - macOS - v12.6
 
 ## Features
-List the ready features here:
+<!-- List the ready features here: -->
 
 - Full CRUD on Courses
 - Full CRUD on Lessons
