@@ -1,4 +1,4 @@
-# InSevenMinutes App
+# In7Minutes App
 > Live demo [_here_](http://in7min-env.eba-pmg6pmub.eu-west-2.elasticbeanstalk.com/). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
@@ -13,7 +13,7 @@
 <!-- * [License](#license) -->
 
 ## General Information
--  InSevenMinutes App is a Learning Management System (LMS) for the administration and delivery of educational courses.
+-  In7Minutes App is a Learning Management System (LMS) for the administration and delivery of educational courses.
 
 ## Technologies Used
 - PostgreSQL
@@ -31,8 +31,8 @@
 ## Features
 List the ready features here:
 
-- Full CRUD of Courses
-- Full CRUD of Lessons
+- Full CRUD on Courses
+- Full CRUD on Lessons
 
 ## Screenshots
 ![Example screenshot](images/logo.png)
