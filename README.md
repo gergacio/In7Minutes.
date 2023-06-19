@@ -40,12 +40,12 @@
 <!-- ![Example screenshot](./screenshots/shopska_salad.png) -->
 <!-- If you have screenshots you'd like to share, include them here. -->
 
-<!-- ## Setup -->
+## Setup
 
 <!-- Proceed to describe how to install / get started with the project. -->
 
 
-<!-- ## Usage -->
+## Usage
 <!-- How does one go about using it? -->
 
 
