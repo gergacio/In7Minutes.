@@ -35,7 +35,7 @@
 - Full CRUD on Lessons
 
 ## Screenshots
-![Example screenshot](images/logo.png)
+![Example screenshot](images/in7min_home_page.png)
 ![Example screenshot](images/architecture.png)
 <!-- ![Example screenshot](./screenshots/shopska_salad.png) -->
 <!-- If you have screenshots you'd like to share, include them here. -->
