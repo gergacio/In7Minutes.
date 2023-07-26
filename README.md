@@ -1,5 +1,5 @@
 # In7Minutes App
-> Live demo [_here_](http://in7min-env.eba-pmg6pmub.eu-west-2.elasticbeanstalk.com/). <!-- If you have the project hosted somewhere, include the link here. -->
+> Live demo [_here_](temporarily unavailable). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
 * [General Info](#general-information)
